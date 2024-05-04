@@ -39,5 +39,6 @@ Route::delete('/users/{id}', [UserController:: class ,"delete"] );
 Route::get('/expense', [ExpenseController:: class ,"show"] );
 Route::get('/expense/{id}', [ExpenseController:: class ,"detail"] );
 Route::get('/expense/select/{user_id}', [ExpenseController:: class ,"select"] );
+Route::get('/expense/countAmount/{user_id}', [ExpenseController:: class ,"countAmount"] );
 Route::delete('/expense/{id}', [ExpenseController:: class ,"delete"] );
 Route::post('/expense', [ExpenseController:: class ,"store"] );

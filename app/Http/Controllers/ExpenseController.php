@@ -62,6 +62,16 @@ class ExpenseController extends Controller
 
 
 
+    public function countAmount($user_id)
+{
+    // Count the total amount for the specified user ID
+    $totalAmount = Expense::where('user_id', $user_id)->sum('amount');
+
+    // Return the total amount as a JSON response
+    return response()->json(['total_amount' => $totalAmount], 200);
+}
+
+
 
     
     
